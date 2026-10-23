@@ -1,0 +1,26 @@
+[workspace]
+members = ["crates/*"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+
+[workspace.dependencies]
+core = { path = "crates/core" }
+fs = { path = "crates/fs" }
+uuid = { version = "1.28.0", features = ["v4"]}
+
+
+[package]
+name = "telluric"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+core.workspace = true
+
+[lints.clippy]
+unwrap_used = "deny"
+
+[lints.rust]
+unsafe_code = "deny"

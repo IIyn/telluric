@@ -1,0 +1,6 @@
+[package]
+name = "fs"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
